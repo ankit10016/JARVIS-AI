@@ -8,7 +8,7 @@ import random
 import numpy as np
 
 
-chatStr = ""
+chatStr = ""                      # Variable to store the conversation history
 
 def chat(query):
     global chatStr
@@ -40,11 +40,10 @@ def ai(prompt):
         temperature=0.7,
         max_tokens=256,
         top_p=1,
-        frequency_penalty=0,
+        frequency_penalty=0, 
         presence_penalty=0
     )
-    # todo: Wrap this inside of a  try catch block
-    # print(response["choices"][0]["text"])
+   
     text += response["choices"][0]["text"]
     if not os.path.exists("Openai"):
         os.mkdir("Openai")
@@ -59,7 +58,6 @@ def say(text):
 def takeCommand():
     r = sr.Recognizer()
     with sr.Microphone() as source:
-        # r.pause_threshold =  0.6
         audio = r.listen(source)
         try:
             print("Recognizing...")
@@ -115,4 +113,4 @@ if __name__ == '__main__':
 
 
 
-        # say(query)
+        

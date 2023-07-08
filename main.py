@@ -14,7 +14,7 @@ def chat(query):
     global chatStr
     print(chatStr)
     openai.api_key = apikey
-    chatStr += f"Harry: {query}\n Jarvis: "
+    chatStr += f"Harry: {query}\n neo: "
     response = openai.Completion.create(
         model="text-davinci-003",
         prompt= chatStr,
@@ -65,11 +65,11 @@ def takeCommand():
             print(f"User said: {query}")
             return query
         except Exception as e:
-            return "Some Error Occurred. Sorry from Jarvis"
+            return "Some Error Occurred. Sorry from neo"
 
 if __name__ == '__main__':
-    print('Welcome to Jarvis A.I')
-    say("Jarvis A.I")
+    print('Welcome to neo A.I')
+    say("neo A.I")
     while True:
         print("Listening...")
         query = takeCommand()
@@ -99,7 +99,7 @@ if __name__ == '__main__':
         elif "Using artificial intelligence".lower() in query.lower():
             ai(prompt=query)
 
-        elif "Jarvis Quit".lower() in query.lower():
+        elif "neo Quit".lower() in query.lower():
             exit()
 
         elif "reset chat".lower() in query.lower():

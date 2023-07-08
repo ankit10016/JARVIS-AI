@@ -1,2 +1,4 @@
-# JARVIS-AI
-AI-powered desktop assistant [ june2023 ] Developed an AI-powered desktop assistant capable of voice-based interaction. Leveraged OpenAI's text-davinci-003 model to generate human-like responses. Implemented various features like web browsing, music playback, time display, application launch, and AI chatting
+AI-Powered Desktop Assistant 
+• Developed AI-powered smart desktop assistant using the OpenAI API, implemented in Python and developed in the PyCharm IDE
+• Used speech recognition & pyaudio packages for voice-based interaction enabling voice commands and text-to-speech conversion.
+• Implemented web browsing, music playback, time display, and application launch features by voice command for an interactive experience
